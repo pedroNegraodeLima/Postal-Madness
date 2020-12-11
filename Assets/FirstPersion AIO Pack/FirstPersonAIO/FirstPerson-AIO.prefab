@@ -296,8 +296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1a5ad4f9ffb154ca7813fdad11017a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerPauseState: 0
   enableCameraMovement: 1
   mouseInputInversion: 0
+  cameraInputMethod: 0
   verticalRotationRange: 170
   mouseSensitivity: 10
   fOVToMouseSensitivity: 1
@@ -333,7 +335,7 @@ MonoBehaviour:
     gravityMultiplier: 1
     zeroFrictionMaterial: {fileID: 0}
     highFrictionMaterial: {fileID: 0}
-    maxSlopeAngle: 70
+    maxSlopeAngle: 55
     maxWallShear: 89
     maxStepHeight: 0.2
     curntGroundNormal: {x: 0, y: 0, z: 0}
