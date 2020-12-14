@@ -49,9 +49,7 @@
 /// 09/26/17 || msg: "Fixed Headbobbing in mid air. Added a option for head bobbing, Added optional Stamina. Added Auto Crosshair Feature." || Author Signature: Aedan Graves|| version v1.0 >> v1.1
 /// 09/21/17 || msg: "Finished SMB FPS Logic." || Author Signature: Aedan Graves || version v0.0 >> v1.0
 ///
-/// 
-/// 
-/// Made changes that you think should come "Out of the box"? E-mail the modified Script with A new entry on the top of the Change log to: modifiedassets@aedangraves.info
+
 
 using UnityEngine;
 using UnityEngine.UI;
