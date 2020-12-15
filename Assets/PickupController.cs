@@ -8,7 +8,8 @@ public class PickupController : MonoBehaviour
     public Rigidbody rb;
     public BoxCollider coll;
     public Transform player, gunContainer, fpsCam;
-    //public GameObject fakeNews;
+    public MeshRenderer fakeNews;
+    public MeshRenderer trueNews;
 
     public float pickUpRange;
     public float dropForwardForce, dropUpwardForce;
@@ -23,6 +24,8 @@ public class PickupController : MonoBehaviour
         {
             rb.isKinematic = false;
             coll.isTrigger = false;
+            fakeNews.enabled = false;
+            trueNews.enabled = true;
         }
 
         if (equipped)
@@ -30,6 +33,8 @@ public class PickupController : MonoBehaviour
             rb.isKinematic = true;
             coll.isTrigger = true;
             slotFull = true;
+            fakeNews.enabled = true;
+            trueNews.enabled = false;
         }
     }
 
@@ -61,7 +66,8 @@ public class PickupController : MonoBehaviour
         rb.isKinematic = true;
         coll.isTrigger = true;
 
-       // gunScript.enabled = true;
+        fakeNews.enabled = true;
+        trueNews.enabled = false;
 
     }
 
@@ -69,6 +75,8 @@ public class PickupController : MonoBehaviour
     {
         equipped = false;
         slotFull = false;
+        fakeNews.enabled = false;
+        trueNews.enabled = true;
 
         //Set parent to null
         transform.SetParent(null);
@@ -87,7 +95,7 @@ public class PickupController : MonoBehaviour
 
         //Add random torque rotation when throwing 
         float random = Random.Range(-1f, 1f);
-        rb.AddTorque(new Vector3(random, random, random) * 10);
+        rb.AddTorque(new Vector3(random, random, random) * 30);
 
 
     }
